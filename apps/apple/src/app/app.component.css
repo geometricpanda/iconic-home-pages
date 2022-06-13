@@ -1,0 +1,30 @@
+:host {
+  display: block;
+}
+
+.apple__container {
+  display: block;
+  background-color: #000;
+  min-height: 400vh;
+}
+
+.apple__animation {
+  display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 1;
+}
+
+.apple__content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 200;
+  min-height: 200vh;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
