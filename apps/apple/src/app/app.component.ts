@@ -27,7 +27,8 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   constructor(
-    private loader: NgtGLTFLoader) {
+    private loader: NgtGLTFLoader,
+    private cdRef: ChangeDetectorRef) {
   }
 
   ngOnInit() {
@@ -54,6 +55,9 @@ export class AppComponent implements OnInit, AfterViewInit {
           delay: 0.2,
           ease: 'power1.inOut',
         },
+        onUpdate: () => {
+          this.cdRef.detectChanges();
+        }
       },
     });
 
